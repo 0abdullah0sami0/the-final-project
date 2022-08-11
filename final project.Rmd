@@ -22,19 +22,17 @@ knitr::opts_chunk$set(echo= TRUE,
                       message = FALSE)
 ```
 
-
 # 1. Introduction to Rmarkdown
 
 Rmarkdown file (.Rmd) allows to:
 
-- Save and execute code
+-   Save and execute code
 
-- Generate high quality reports that can be shared with an audience, by knitting together plots, tables, and results with narrative text, and rendering to a variety of formats like HTML, PDF, MS Word, or MS PowerPoint.
-
+-   Generate high quality reports that can be shared with an audience, by knitting together plots, tables, and results with narrative text, and rendering to a variety of formats like HTML, PDF, MS Word, or MS PowerPoint.
 
 # 2. How to make a report using Rmarkdown?
 
-1- Create new file:  File > New File > R Markdown
+1- Create new file: File \> New File \> R Markdown
 
 2- Create code chunks: Run code by line, by chunk, or all at once.
 
@@ -45,7 +43,6 @@ Rmarkdown file (.Rmd) allows to:
 5- Save and knit your document
 
 6- Publish (rpubs.com, Rstudio connect etc)
-
 
 # 3. Data analysis
 
@@ -63,7 +60,6 @@ library(tidyverse)
 library(knitr)
 ```
 
-
 ```{r}
 # import data from csv file
 cars.price <- read.csv("archive/CarPrice.csv")
@@ -76,7 +72,7 @@ head(cars.price, 5)
 tail(cars.price, 5)
 ```
 
-We select some variables to use in our analysis. 
+We select some variables to use in our analysis.
 
 ```{r}
 # selecting columns
@@ -91,7 +87,6 @@ cars.price_4 <- cars.price[,c("stroke", "price","carbody")]
 
 ```
 
-
 ```{r}
 # check fuel type values
 table(cars.price$fueltype) %>% kable(col.names = c("Value","Frequency"), caption="Fuel type values")
@@ -102,12 +97,10 @@ cars.price_5 <- cars.price %>%
   filter(fueltype == "gas")
 ```
 
-
 ```{r}
 # summary statistics numeric variables
 summary(cars.price_5[,c(1,2,4,8,10)]) %>% kable(caption = "Summary statistics numeric variables")
 ```
-
 
 ```{r}
 # convert character variables to factors for one variable:
@@ -120,7 +113,6 @@ cars.price_5[,-c(1,2,4,8,10)] <- lapply(cars.price_5[,-c(1,2,4,8,10)] , as.facto
 options(knitr.kable.NA = '')
 summary(cars.price_5[,-c(1,2,4,8,10)]) %>% kable(caption="Summary of factor variables")
 ```
-
 
 ## 3.2. Data visualization
 
