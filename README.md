@@ -3,7 +3,7 @@
 # Citation:
 > abdullah shalaan. (2022, August 11). the final project. Zenodo. https://doi.org/10.5281/zenodo.6984372
 > 
-> abdullah shalaan. (2022, August 30). the final project. Rpubs. https://rpubs.com/AbdullahS/933441
+> abdullah shalaan. (2022, August 30). the final project. Rpubs. [https://rpubs.com/AbdullahS/933441](https://rpubs.com/AbdullahS/CarPricesAnalysis)
 
 # Project title
 > Car Prices Data Analysis
